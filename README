@@ -1,0 +1,20 @@
+Basic picture webpage generator - pic_site.py
+
+to run, use
+	on terminal:
+	python pic_site.py /pathto/pictures descriptions.txt output.html full-site 
+	where 
+	- '/pathto/pictures' is the directory to the pictures you want to list in an html page. 
+	Make sure the pictures are not in subdirectories.
+	- 'descriptions.txt' is a textfile that contains all the discriptions you will put under the pictures. 
+	Each description is seperated by a new line
+	- 'output.html' is the textfile where we will put the resulting html code
+	- 'full-site' is a tag used to just give html code of not only the pictures but of wrapping html code
+        so that the resulting text can be made into a stand-alone html page. By default, without the tag, the script will
+        get the html string to embed into your own html page.
+For example, in this folder, run python pic_site.py TREXPICS disc.txt index.html full-site to get a basic webpage showing images and discriptions.
+Background:
+	I started with the code string_gen.py to generate html code for the body of a webpage I had for a class. I had to process some images with python code and display them in this webpage. I wrote this script so that I can easily put all the photos I want into the html page. If I had to resize the images on the page, I can change the <img> tag in my code. If I had to select different images, I would put different image names in string_gen.py. I wrote website_gen.py after for fun, extending what I did in string_gen.py to create a standalone html page. 
+
+	But the problem with these codes were that I had to manually change variables inside to select images and discriptions on my html code. I made pic_site.py to provide an easier, more flexible interface. Now any user does not have to modify the code itself to create a webpage. Instead, they put their pictures in a folder and discriptions in any text file. They just need to pass in the folder and text file to get their page.   
+
